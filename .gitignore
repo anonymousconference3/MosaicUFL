@@ -1,0 +1,86 @@
+# ===== Python cache and bytecode =====
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+*.egg
+*.egg-info/
+*.eggs/
+*.whl
+
+# ===== Temporary and system files =====
+.DS_Store
+*.log
+*.tmp
+*.swp
+
+# ===== Model & data files =====
+*.tar.gz
+*.h5
+*.ckpt
+*.pt
+*.pth
+*.npz
+*.msgpack
+*.safetensors
+*.bin
+*.pkl
+*.pb
+*.onnx
+*.model
+*.tflite
+*.weights
+
+# ===== Image outputs or intermediate files =====
+*.png
+*.jpg
+*.jpeg
+*.bmp
+
+# ===== Jupyter/IPython notebook checkpoints =====
+.ipynb_checkpoints/
+
+# ===== IDE/editor configuration =====
+.vscode/
+.idea/
+
+# ===== Build artifacts =====
+build/
+dist/
+*.egg-info/
+*.o
+*.out
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+
+# ===== Environment configuration =====
+.env
+.venv/
+*.yml
+*.yaml
+
+# ===== Docker & container files =====
+*.dockerignore
+docker_setup.sh
+Dockerfile*
+
+# ===== Git submodules or embedded repositories =====
+MosaicUFL/
+Module 02/**/swiftui-chat/
+
+# ===== Generated data or results from simulation =====
+clientDataMap/
+client_behave_trace
+client_device_capacity
+cifar-10-python.tar.gz
+data_batch_*
+test_batch
+batches.meta
+*.json
+*.md
+
