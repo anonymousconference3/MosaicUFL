@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: oort
+Version: 1.0
+Summary: Participant selection for efficent federated learning
+Home-page: https://github.com/SymbioticLab/Oort
+Author: Fan Lai and Xiangfeng Zhu
+Author-email: fanlai@umich.edu
+License-File: LICENSE
