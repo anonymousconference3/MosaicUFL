@@ -34,7 +34,7 @@ from utils.utils_data import get_data_transform
 from utils.utils_model import MySGD, test_model
 from transformers import AutoTokenizer, AutoModelForMaskedLM
 
-nlp_model_path ='/home/zikang/code/albert-base-v2'
+nlp_model_path =''
 if args.task == 'nlp':
     from utils.nlp import *
 elif args.task == 'speech':
