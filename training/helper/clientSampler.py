@@ -4,7 +4,7 @@ from random import Random
 import pickle
 import sys
 import logging
-sys.path.insert(0, '/home/zikang/code/training/oort_egg_contents')
+sys.path.insert(0, '')
 from oort import create_training_selector
 import oort
 
