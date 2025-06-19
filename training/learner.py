@@ -781,26 +781,6 @@ def run(rank, queue, param_q, stop_flag, client_cfg,train_dataset):
     current_time = now.strftime("%m_%d_%H_%M")
         
 
-    # dataset_kwargs = {
-    #     'dataset':"cifar10",
-    #     'data_dir': '/home/datadisk/zikang/iDLSys_client_selection_2023-master/training/fedil/data',
-    #     'download':False,
-    #     'debug_subset_size':None
-    # }
-
-    # dataloader_kwargs = {
-    #     'batch_size': 10,
-    #     'drop_last': True,
-    #     'pin_memory': True,
-    #     'num_workers': 5,
-    # }
-
-    # dataset_train =ds.get_dataset(
-    #     transform=ds.get_aug_fedmatch("cifar10", True), 
-    #     train=True, 
-    #     **dataset_kwargs
-    # )
-
     
     m = int(1)
 
@@ -1327,7 +1307,7 @@ if __name__ == "__main__":
     gc.disable()
     model, train_dataset, test_dataset = init_dataset()
     if args.task == "nlp":
-        nlp_model_path ='/home/zikang/code/albert-base-v2'
+        nlp_model_path ='your_path'
         tokenizer = AlbertTokenizer.from_pretrained(nlp_model_path)
     gc.enable()
     gc.collect()
