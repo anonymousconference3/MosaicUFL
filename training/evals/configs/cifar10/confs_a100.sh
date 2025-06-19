@@ -1,22 +1,22 @@
 worker_ips:
     - 10.70.150.150:[0,1]
 
-exp_path: /scratch/ek59/ny4733/tmp/iDLSys_client_selection_2023-master/training
+exp_path: /scratch/your_path/your_path/tmp/iDLSys_client_selection_2023-master/training
 
 
-#python_path: /home/datadisk/zikang/anaconda3/envs/oort/bin/
+#python_path: /home/datadisk/your_path/anaconda3/envs/oort/bin/
 
 auth:
-    ssh_user: "zikang"
+    ssh_user: "your_path"
     ssh_private_key: ~/.ssh/id_rsa
     additional_auth:
         - ip: 10.70.150.150
-          username: "zikang"
-          password: "zikang123"
+          username: "your_path"
+          password: "your_path"
 
 # cmd to run before we can indeed run oort (in order)
 setup_commands:
-    # - source /home/datadisk/zikang/anaconda3/bin/activate oort     
+    # - source /home/datadisk/your_path/anaconda3/bin/activate oort     
     # - export NCCL_SOCKET_IFNAME='enp94s0f0'         # Run "ifconfig" to ensure the right NIC for nccl if you have multiple NICs --enp1s0
 
 # ========== Additional job configuration ========== 
@@ -25,13 +25,13 @@ setup_commands:
 
 
 job_conf:
-    - log_path: /scratch/ek59/ny4733/tmp/iDLSys_client_selection_2023-master/training/evals/log # Path of log files
+    - log_path: /scratch/your_path/your_path/tmp/iDLSys_client_selection_2023-master/training/evals/log # Path of log files
     - job_name: cifar10                   # Generate logs under this folder: log_path/job_name/time_stamp
     - total_worker: 72                    # Number of participants per round, we use K=100 in our paper, large K will be much slower
     - data_set: cifar10                     # Dataset: openImg, google_speech, stackoverflow
-    - data_dir: /scratch/ek59/ny4733/tmp/iDLSys_client_selection_2023-master/training/fedil/data    # Path of the dataset
-    - data_mapfile: /scratch/ek59/ny4733/tmp/iDLSys_client_selection_2023-master/cilentDataMap/cifar10/data_to_client_map_100.pkl           # Allocation of data to each client, turn to iid setting if not provided
-    - client_path: /scratch/ek59/ny4733/tmp/iDLSys_client_selection_2023-master/FLPerf/benchmark/dataset/data/device_info/client_behave_trace.pkl     # Path of the client trace
+    - data_dir: /scratch/your_path/your_path/tmp/iDLSys_client_selection_2023-master/training/fedil/data    # Path of the dataset
+    - data_mapfile: /scratch/your_path/your_path/tmp/iDLSys_client_selection_2023-master/cilentDataMap/cifar10/data_to_client_map_100.pkl           # Allocation of data to each client, turn to iid setting if not provided
+    - client_path: /scratch/your_path/your_path/tmp/iDLSys_client_selection_2023-master/FLPerf/benchmark/dataset/data/device_info/client_behave_trace.pkl     # Path of the client trace
     - sample_mode: random                            # Client selection: random, oort
     - model: shufflenet_v2_x2_0                            # Models: shufflenet_v2_x2_0, mobilenet_v2, resnet34, albert-base-v2
     - gradient_policy: yogi                 # Commenting out this line will turn to "Fedprox"
@@ -45,7 +45,7 @@ job_conf:
     - cos: 0
     - load_model: 0
     - load_client: 0
-    - load_path: "/scratch/ek59/ny4733/tmp/iDLSys_client_selection_2023-master/training/evals/model/9_0.1l_s_change300_record_cos_dd_model_weights_cifar10.pkl"
+    - load_path: "/scratch/your_path/your_path/tmp/iDLSys_client_selection_2023-master/training/evals/model/9_0.1l_s_change300_record_cos_dd_model_weights_cifar10.pkl"
     - label_rate: 0.01
     - batch_size: 10
     - l_distance: 0 #1: aggregate using distance
