@@ -328,8 +328,8 @@ def compute_accuracy(logits, target):
     return accuracy
 
 def registerTime(total_imgs, numOfClients,dict_users_unlabeled):
-    if os.path.exists("/home/zikang/code/FLPerf/benchmark/dataset/data/device_info/client_device_capacity"):
-        with open("/home/zikang/code/FLPerf/benchmark/dataset/data/device_info/client_device_capacity", 'rb') as fin:
+    if os.path.exists("your_path"):
+        with open("your_path", 'rb') as fin:
             # {clientId: [computer, bandwidth]}
             global_client_profile = pickle.load(fin)
     clientId = 1
